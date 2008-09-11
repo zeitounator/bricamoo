@@ -1,0 +1,27 @@
+#tagCloud {
+	border: solid maroon 1px;
+	width: 200px;
+	margin: 20px;
+	padding: 5px;
+}
+
+#tagCloud h2 {
+	font-size: 1.2em;
+	margin: 4px 0;
+	text-align: center;
+}
+
+#tagCloud ul {
+	font-size: 1.1em;
+	text-align: center;
+	margin: 0 auto;
+}
+
+#tagCloud li {
+	display: inline;
+}
+
+#tagCloud li a span {
+	display: none;
+}
+
