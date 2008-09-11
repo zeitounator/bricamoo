@@ -9,7 +9,7 @@
  *
  * X est le nombre d'occurences du tag.
  * 
- * @copyright Olivier Clavel (olivier.clavel@
+ * @copyright Olivier Clavel (olivier DOT clavel AT gmail DOT com
  * @depends mootools 1.2 (core et plugins)
  * @todo - déterminer les dépendances exactes (il faut pas la totale non plus.
  * 	 - rendre l'objet plus configurable.
