@@ -104,6 +104,7 @@ a:hover {
 	margin-left: 10px;
 }
 
-.front p {
+.front p,
+.returnLink {
 	margin: 10px 0;
 }
