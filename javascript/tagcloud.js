@@ -116,7 +116,7 @@ var bmTagCloud = new Class({
  	 * Récupère le poids du tag à l'intérieur des parenthèse du span
  	 */ 
 	getTagWeight: function(weightElement)  {
-		var rawText = weightElement.firstChild.nodeValue;
+		var rawText = weightElement.get('text');
 		var matches = rawText.match(/\((\d{1,3})\)/);
 		return matches[1];
 	},
