@@ -22,6 +22,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 body {
 	line-height: 1;
 	font-family: verdana, arial, sans-serif;
+	margin: 0 1em;
 }
 
 ol, ul {
@@ -97,30 +98,12 @@ a:hover {
 	text-decoration: underline;
 }
 
-#tagCloud {
-	border: solid maroon 1px;
-	width: 200px;
-	margin: 20px;
-	padding: 5px;
+#exampleList {
+	display: list;
+	list-style-type: square;
+	margin-left: 10px;
 }
 
-#tagCloud h2 {
-	font-size: 1.2em;
-	margin: 4px 0;
-	text-align: center;
+.front p {
+	margin: 10px 0;
 }
-
-#tagCloud ul {
-	font-size: 1.1em;
-	text-align: center;
-	margin: 0 auto;
-}
-
-#tagCloud li {
-	display: inline;
-}
-
-#tagCloud li a span {
-	display: none;
-}
-
