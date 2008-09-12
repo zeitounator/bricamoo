@@ -1,0 +1,31 @@
+#menu {
+	width: 200px;
+	margin-left: 10px;
+	border: dotted maroon 1px;
+	padding-bottom: 10px;
+}
+
+#menu h2 {
+	font-size: 1em;
+	font-weight: bold;
+	margin: 0.5em 0;
+	text-align: center;
+}
+
+#mainMenu {
+	padding: 0 5px;
+}
+
+#mainMenu dt {
+	margin: 2px 0;
+	padding: 5px 3px;
+	border-bottom: dashed 1px maroon;
+}
+
+#mainMenu dt:hover {
+	cursor: pointer;
+}
+
+#mainMenu dd {
+	display: none;
+}
