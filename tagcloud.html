@@ -6,6 +6,16 @@
 		<script type="text/javascript" src="/lib/mootools/mootools-1.2-core.js"></script>
 		<script type="text/javascript" src="/lib/mootools/mootools-1.2-more.js"></script>
 		<script type="text/javascript" src="/javascript/tagcloud.js"></script>
+		<script type="text/javascript">
+			//<![DCATA[	
+			var myCloud;
+			var myTipFormat = '%%number%% articles pour "%%tag%%"';
+			window.addEvent('domready', function() {
+				var tagCloudRoot = ($('tagCloud').getElement('ul'));
+				myCloud = new tagCloud(tagCloudRoot, myTipFormat);
+			});
+			//]]>	
+		</script>
 		<link rel="stylesheet" type="text/css" href="/stylesheet/bricamoo.css" />
 		<link rel="stylesheet" type="text/css" href="/stylesheet/tagcloud.css" />
 	</head>

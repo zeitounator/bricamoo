@@ -120,12 +120,3 @@ var tagCloud = new Class({
 	}
 });
 
-
-var myCloud;
-var myTipFormat = '%%number%% articles pour "%%tag%%"';
-window.addEvent('domready', function() {
-	var tagCloudRoot = ($('tagCloud').getElement('ul'));
-	myCloud = new tagCloud(tagCloudRoot, myTipFormat);
-});
-
-
