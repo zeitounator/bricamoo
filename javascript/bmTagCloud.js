@@ -27,13 +27,12 @@ var bmTagCloud = new Class({
 		maxPercent: 120,
 		/* Format par défaut pour le titre dans le tip */
 		tipFormat: 'Il y a %%number%% éléments pour le tag %%tag%%',
-		/* Appliquer un effet de morphing aux tags */
-		morph: true,
-	 	/* Durée de l'effet de morph en ms */
+		/* Appliquer une annimagion aux tags */
+		annimate: true,
+	 	/* Durée de l'annimation en ms */
 		duration: 1000,
-		/* Transition à utiliser pour le morph */
-		transition: Fx.Transitions.Elastic.easeInOut
-		
+		/* Transition à utiliser pour l'annimation */
+		transition: Fx.Transitions.Quart.easeInOut
 	},
 
 	/* Valeurs par défaut des propriétés */
@@ -54,12 +53,12 @@ var bmTagCloud = new Class({
 	initialize: function(element, options) {
 		this.tagRoot = element;
 		this.setOptions(options);
-		if (!this.options.morph) {
+		if (!this.options.annimate) {
 			this.tagRoot.setStyle('visibility', 'hidden');
 		}
 		this.setDefaults();
 		this.parseTags();
-		this.morphTags();
+		this.resizeTags();
 	},
 	
 	/* Parse tous les tags de la liste */
@@ -74,20 +73,10 @@ var bmTagCloud = new Class({
 			/* On enregistre le min/max pour les occurences */
 			this.setMinMax(tagWeight);
 			
-			/* On cré un effet morph par tag si le morphing a été demandé 
- 			et on l'enregistre dans un array avec le poids correspondant */
-			var effectOrElem;
-			if (this.options.morph) {
-				effectOrElem =  new Fx.Morph(tagLink, {
-					duration: this.options.duration,
-					transition: this.options.transition,
-					unit: '%'
-				});
-			} else {
-				effectOrElem = tagLink;
-			}
-			this.tagHash.include([tagWeight, effectOrElem]);
-
+			/* On enregistre dans un array avec le poids
+ 			le poid et le tag correspondant */
+			this.tagHash.include([tagWeight, tagLink]);
+			
 			/* On change le title du lien avec notre string formaté 
  			et on cré un tooltip sur le lien */
 			tagLink.title = this.getFormatedTip(tagName, tagWeight);
@@ -95,19 +84,22 @@ var bmTagCloud = new Class({
 		}, this);
 	},
 
-	/* Annime les tags pour les mettre à la bonne taille visuelle */
-	morphTags: function() {
-		this.tagHash.each(function(effectInfo) {
-			var size = this.getFontSize(effectInfo[0]);
-			var effect = effectInfo[1];
-			if (effect.start) {
-				effect.start({'font-size' : [100, size]});
-			} else {
-				effect.setStyle('font-size', size+'%');
+	/* Met les tags à la bonne taille et les annime le ca échéant */
+	resizeTags: function() {
+		this.tagHash.each(function(tagInfo) {
+			var size = this.getFontSize(tagInfo[0]);
+			var tag = tagInfo[1];	
+			if (this.options.annimate) {
+				tag.set('tween', {
+					duration: this.options.duration,
+					transition: this.options.transition,
+					unit: '%'
+				});
+				tag.tween('font-size', 100, size);
 			}
 				
 		}, this);
-		if (!this.options.morph) {
+		if (!this.options.annimate) {
 			this.tagRoot.setStyle('visibility', 'visible');
 		}
 	},
