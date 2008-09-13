@@ -5,55 +5,50 @@
 		<title>bricamoo tests et exemples</title>
 		<link rel="stylesheet" type="text/css" href="stylesheet/bricamoo.css" />
 		<link rel="stylesheet" type="text/css" href="stylesheet/menu.css" />
+		<script type="text/javascript" src="lib/mootools/mootools-1.2-core.js"></script>
+		<script type="text/javascript" src="lib/mootools/mootools-1.2-more.js"></script>
 		<script type="text/javascript" src="javascript/menu.js"></script>
+		<script type="text/javascript">
+			//<![CDATA[
+			window.addEvent('domready', function() {
+				new bmMenu($('mainMenu'), {delay: 200});
+			});
+			//]]>
+		</script>
 	</head>
 	<body>
 		<h1>Bricamoo: dynamic menu</h1>
 		<div id="menu">
 			<h2>Main menu</h2>
 			<dl id="mainMenu">
-				<dt>Entry</dt>
+				<dt>Fruits</dt>
 				<dd>
 					<ul>
-						<li><a href="#">Sub-entry</a></li>
-						<li><a href="#">Sub-entry</a></li>
-						<li><a href="#">Sub-entry</a></li>
-						<li><a href="#">Sub-entry</a></li>
-						<li><a href="#">Sub-entry</a></li>
-						<li><a href="#">Sub-entry</a></li>
-						<li><a href="#">Sub-entry</a></li>
-						<li><a href="#">Sub-entry</a></li>
-						<li><a href="#">Sub-entry</a></li>
+						<li><a href="#">Banana</a></li>
+						<li><a href="#">Apple</a></li>
+						<li><a href="#">Orange</a></li>
+						<li><a href="#">Pear</a></li>
+						<li><a href="#">Cherry</a></li>
 					</ul>
 				</dd>
 				
-				<dt>Entry</dt>
+				<dt>Vegetables</dt>
 				<dd>
 					<ul>
-						<li><a href="#">Sub-entry</a></li>
-						<li><a href="#">Sub-entry</a></li>
-						<li><a href="#">Sub-entry</a></li>
-						<li><a href="#">Sub-entry</a></li>
-						<li><a href="#">Sub-entry</a></li>
-						<li><a href="#">Sub-entry</a></li>
-						<li><a href="#">Sub-entry</a></li>
-						<li><a href="#">Sub-entry</a></li>
-						<li><a href="#">Sub-entry</a></li>
+						<li><a href="#">Salad</a></li>
+						<li><a href="#">Carrot</a></li>
+						<li><a href="#">Eggplant</a></li>
+						<li><a href="#">Zucchini</a></li>
 					</ul>		
 				</dd>
 		
-				<dt>Entry</dt>
+				<dt>Meats</dt>
 				<dd>
 					<ul>
-						<li><a href="#">Sub-entry</a></li>
-						<li><a href="#">Sub-entry</a></li>
-						<li><a href="#">Sub-entry</a></li>
-						<li><a href="#">Sub-entry</a></li>
-						<li><a href="#">Sub-entry</a></li>
-						<li><a href="#">Sub-entry</a></li>
-						<li><a href="#">Sub-entry</a></li>
-						<li><a href="#">Sub-entry</a></li>
-						<li><a href="#">Sub-entry</a></li>
+						<li><a href="#">Veal</a></li>
+						<li><a href="#">Pork</a></li>
+						<li><a href="#">Beef</a></li>
+						<li><a href="#">Lamb</a></li>
 					</ul>
 				</dd>
 			</dl>

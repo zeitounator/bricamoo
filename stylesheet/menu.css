@@ -21,11 +21,3 @@
 	padding: 5px 3px;
 	border-bottom: dashed 1px maroon;
 }
-
-#mainMenu dt:hover {
-	cursor: pointer;
-}
-
-#mainMenu dd {
-	display: none;
-}
