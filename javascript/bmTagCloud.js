@@ -96,6 +96,8 @@ var bmTagCloud = new Class({
 					unit: '%'
 				});
 				tag.tween('font-size', 100, size);
+			} else {
+				tag.setStyle('font-size', size+'%');
 			}
 				
 		}, this);
