@@ -8,15 +8,13 @@
 		<script type="text/javascript" src="javascript/bmTagCloud.js"></script>
 		<script type="text/javascript">
 			//<![CDATA[	
-			var myCloud;
 			var myCloudOptions= {
 				minPercent: 85,
 				maxPercent: 150,
 				tipFormat: '%%number%% articles pour "%%tag%%"'
 			}
 			window.addEvent('domready', function() {
-				var tagCloudRoot = ($('tagCloud').getElement('ul'));
-				myCloud = new bmTagCloud(tagCloudRoot, myCloudOptions);
+				new bmTagCloud($('tagCloud').getElement('ul'), myCloudOptions);
 			});
 			//]]>	
 		</script>
