@@ -25,6 +25,8 @@ var bmTagCloud = new Class({
 		minPercent: 70,
 		/* Taille maxi des tags en % */
 		maxPercent: 120,
+		/* Use the Tips plugin on each link */
+		useTips: true,
 		/* Format par défaut pour le titre dans le tip */
 		tipFormat: 'Il y a %%number%% éléments pour le tag %%tag%%',
 		/* Appliquer une annimagion aux tags */
@@ -45,9 +47,7 @@ var bmTagCloud = new Class({
 		this.sizeMultiplier = 0;
 		/* Liste des tailles de tags et des éléments ou appliquer la taille */
 		this.tagHash = new Array();
-		/* Liste des tooltips sur les tags */
-		this.tagTips = new Array();
-	},
+	},
 	
 	/* Constructeur de la classe */
 	initialize: function(element, options) {
@@ -78,9 +78,10 @@ var bmTagCloud = new Class({
 			this.tagHash.include([tagWeight, tagLink]);
 			
 			/* On change le title du lien avec notre string formaté 
- 			et on cré un tooltip sur le lien */
-			tagLink.title = this.getFormatedTip(tagName, tagWeight);
-			this.tagTips.include(new Tips(tagLink));
+ 			et on cré un tooltip sur le lien (le cas échéant)*/
+			if (this.options.useTips) {
+				tagLink.title = this.getFormatedTip(tagName, tagWeight);
+				new Tips(tagLink);
 		}, this);
 	},
 
