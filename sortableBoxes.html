@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr-FR">
+	<head>
+		<title>bricamoo tests et exemples</title>
+		<link rel="stylesheet" type="text/css" href="stylesheet/bricamoo.css" />
+		<link rel="stylesheet" type="text/css" href="stylesheet/sortableBoxes.css" />
+		<script type="text/javascript" src="lib/mootools/mootools-1.2-core.js"></script>
+		<script type="text/javascript" src="lib/mootools/mootools-1.2-more.js"></script>
+		<script type="text/javascript">
+			//<![CDATA[
+			window.addEvent('domready', function() {
+				var lists = $$('#boxList .boxCol ul');
+				var mySortables = new Sortables(lists, {
+					clone : true,
+					opacity: 0.5,
+					handle: 'h2',
+					revert: { duration: 500, transition: Fx.Transitions.Elastic.easeOut }
+
+				});
+			});
+			// ]]>
+		</script>
+	</head>
+	<body>
+		<h1>Sortable boxes</h1>
+		<ul id="boxList">
+			<li class="boxCol">
+				<ul>
+					<li>
+						<h2>Box1</h2>
+						<p>Some Content</p>
+					</li>
+					<li>Box2</li>
+				</ul>
+			</li>
+			<li class="boxCol">
+				<ul>
+					<li>Box3</li>
+					<li>Box4</li>
+				</ul>
+			</li>
+			<li class="boxCol">
+				<ul>
+					<li>Box5</li>
+					<li>Box6</li>
+				</ul>
+			</li>
+			<li class="boxCol">
+				<ul>
+					<li>Box7</li>
+					<li>Box8</li>
+				</ul>
+			</li>
+		</ul>
+	</body>
+</html>

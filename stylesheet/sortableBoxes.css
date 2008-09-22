@@ -1,0 +1,14 @@
+#boxList .boxCol {
+	width: 200px;
+	float: left;
+	margin: 0 10px;
+}
+
+.boxCol li {
+	border: solid green 1px;
+	margin: 0 0 5px 0;
+}
+
+.boxCol li:hover h2 {
+	cursor: move;
+}
