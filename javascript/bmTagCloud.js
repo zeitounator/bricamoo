@@ -47,7 +47,7 @@ var bmTagCloud = new Class({
 		this.sizeMultiplier = 0;
 		/* Liste des tailles de tags et des éléments ou appliquer la taille */
 		this.tagHash = new Array();
-	},
+	},
 	
 	/* Constructeur de la classe */
 	initialize: function(element, options) {
@@ -82,6 +82,7 @@ var bmTagCloud = new Class({
 			if (this.options.useTips) {
 				tagLink.title = this.getFormatedTip(tagName, tagWeight);
 				new Tips(tagLink);
+			}
 		}, this);
 	},
 
