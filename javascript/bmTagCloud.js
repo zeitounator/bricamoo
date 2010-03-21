@@ -12,7 +12,7 @@
  * 
  * @copyright Olivier Clavel (olivier DOT clavel AT gmail DOT com)
  * @depends mootools 1.2 (core et plugins)
- * @todo - déterminer les dépendances exactes (il faut pas la totale non plus.
+ * @todo - déterminer les dépendances exactes (il faut pas la totale non plus...)
  * 	 - amélioration des perfs ?...
  * 	 - rendre les effets configurables
  */
