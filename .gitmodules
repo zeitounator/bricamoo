@@ -1,0 +1,6 @@
+[submodule "lib/mootools-core"]
+	path = lib/mootools-core
+	url = git://github.com/mootools/mootools-core.git
+[submodule "lib/mootools-more"]
+	path = lib/mootools-more
+	url = git://github.com/mootools/mootools-more.git
